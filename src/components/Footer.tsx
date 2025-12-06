@@ -196,7 +196,6 @@ export default function Footer() {
                             sx={{
                                 color: 'inherit',
                                 p: 0.5,
-                                border: '1px solid currentColor',
                                 borderRadius: '50%'
                             }}
                         >
