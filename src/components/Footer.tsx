@@ -3,6 +3,7 @@
 import { Container, Typography, Box, Grid, Stack, IconButton } from '@mui/material';
 import { portfolioData } from '@/utils/constants';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import CodeIcon from '@mui/icons-material/Code';
 import { useRouter, usePathname } from 'next/navigation';
 import SocialLinks from './SocialLinks';
 
@@ -176,6 +177,42 @@ export default function Footer() {
                     >
                         © {new Date().getFullYear()} {portfolioData.personal.name}
                     </Typography>
+
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 1,
+                            color: 'text.secondary',
+                            transition: 'color 0.2s',
+                            '&:hover': { color: 'primary.main' }
+                        }}
+                    >
+                        <Typography
+                            variant="body2"
+                            sx={{
+                                fontSize: '0.75rem',
+                                letterSpacing: '0.05em',
+                                textTransform: 'uppercase',
+                            }}
+                        >
+                            Desenvolvido por Lucas Ávila
+                        </Typography>
+                        <IconButton
+                            href="https://lucavila.com.br"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            size="small"
+                            sx={{
+                                color: 'inherit',
+                                p: 0.5,
+                                border: '1px solid currentColor',
+                                borderRadius: '50%'
+                            }}
+                        >
+                            <CodeIcon sx={{ fontSize: '1rem' }} />
+                        </IconButton>
+                    </Box>
                     <IconButton
                         onClick={scrollToTop}
                         sx={{
